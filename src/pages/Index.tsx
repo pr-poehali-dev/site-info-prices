@@ -14,83 +14,86 @@ const Index = () => {
 
   const services = [
     {
-      icon: 'Briefcase',
-      title: 'Бизнес-консалтинг',
-      description: 'Комплексный анализ бизнес-процессов и разработка стратегий развития компании',
-      features: ['Аудит процессов', 'Оптимизация затрат', 'Стратегическое планирование']
+      icon: 'Truck',
+      title: 'Выделенный автотранспорт',
+      description: 'Перевозка грузов в выделенных автомобилях от 1 до 20 тонн',
+      features: ['Грузоподъемность 1-20т', 'Современный автопарк', 'Отслеживание груза', 'Страхование']
     },
     {
-      icon: 'Users',
-      title: 'IT-аутсорсинг',
-      description: 'Профессиональная поддержка IT-инфраструктуры и разработка программных решений',
-      features: ['Техподдержка 24/7', 'Разработка ПО', 'Облачные решения']
+      icon: 'Container',
+      title: 'Контейнерные перевозки',
+      description: 'Доставка грузов в контейнерах 20 и 40 футов по всей России',
+      features: ['Контейнеры 20ф и 40ф', 'Морские перевозки', 'ЖД доставка', 'Таможенное оформление']
     },
     {
-      icon: 'TrendingUp',
-      title: 'Управленческий консалтинг',
-      description: 'Построение эффективной системы управления и развитие команды',
-      features: ['Обучение персонала', 'Автоматизация', 'KPI и метрики']
+      icon: 'MapPin',
+      title: 'География доставки',
+      description: 'Перевозки от Калининграда до Камчатки по всей территории России',
+      features: ['Вся территория РФ', 'Точные сроки', 'Оптимальные маршруты', 'Без выходных']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Базовый',
-      price: '50 000',
-      period: 'месяц',
+      name: 'Автотранспорт 1-5т',
+      price: 'от 35',
+      period: 'руб/км',
       features: [
-        'Консультации до 10 часов',
-        'Email поддержка',
-        'Базовая аналитика',
-        'Ежемесячный отчет'
+        'Грузоподъемность до 5 тонн',
+        'Объем кузова до 40 м³',
+        'Погрузка/разгрузка',
+        'Страхование груза',
+        'Отслеживание онлайн'
       ]
     },
     {
-      name: 'Профессиональный',
-      price: '120 000',
-      period: 'месяц',
+      name: 'Автотранспорт 5-20т',
+      price: 'от 45',
+      period: 'руб/км',
       popular: true,
       features: [
-        'Консультации до 30 часов',
-        'Приоритетная поддержка',
-        'Расширенная аналитика',
-        'Еженедельные встречи',
-        'Персональный менеджер'
+        'Грузоподъемность до 20 тонн',
+        'Объем кузова до 90 м³',
+        'Крытый/открытый кузов',
+        'Экспедирование',
+        'Персональный менеджер',
+        'Гибкий график'
       ]
     },
     {
-      name: 'Корпоративный',
+      name: 'Контейнеры 20ф/40ф',
       price: 'По запросу',
       period: '',
       features: [
-        'Безлимитные консультации',
-        'Поддержка 24/7',
-        'Полный аудит',
-        'Индивидуальные решения',
-        'Выделенная команда'
+        'Контейнеры 20 и 40 футов',
+        'Морские и ЖД перевозки',
+        'Таможенное оформление',
+        'Складское хранение',
+        'Доставка до двери',
+        'Специализированные контейнеры'
       ]
     }
   ];
 
   const team = [
     {
-      name: 'Александр Петров',
+      name: 'Сергей Волков',
       position: 'Генеральный директор',
       icon: 'User'
     },
     {
-      name: 'Мария Иванова',
-      position: 'Руководитель отдела консалтинга',
+      name: 'Андрей Морозов',
+      position: 'Начальник автопарка',
       icon: 'User'
     },
     {
-      name: 'Дмитрий Сидоров',
-      position: 'Технический директор',
+      name: 'Ольга Соколова',
+      position: 'Руководитель логистики',
       icon: 'User'
     },
     {
-      name: 'Елена Смирнова',
-      position: 'Руководитель проектов',
+      name: 'Иван Кузнецов',
+      position: 'Менеджер по работе с клиентами',
       icon: 'User'
     }
   ];
@@ -101,8 +104,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <Icon name="Building2" size={28} className="text-primary" />
-              <span className="text-xl font-bold text-primary">BusinessPro</span>
+              <Icon name="Truck" size={28} className="text-primary" />
+              <span className="text-xl font-bold text-primary">ГрузТранс</span>
             </div>
             
             <div className="hidden md:flex items-center gap-8">
@@ -137,10 +140,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary">
-              Профессиональные решения для вашего бизнеса
+              Грузоперевозки по всей России
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Консалтинг и аутсорсинг от экспертов с 15-летним опытом. Помогаем компаниям расти и развиваться.
+              От Калининграда до Камчатки. Выделенный автотранспорт от 1т до 20т. Контейнерные перевозки 20ф и 40ф.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={() => scrollToSection('services')} className="text-lg">
@@ -159,9 +162,9 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-primary">О компании</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              BusinessPro — ведущая сервисная компания, специализирующаяся на бизнес-консалтинге 
-              и IT-аутсорсинге. Мы помогаем компаниям оптимизировать процессы, внедрять современные 
-              технологии и достигать стратегических целей.
+              ГрузТранс — надежная транспортная компания с многолетним опытом грузоперевозок по всей России. 
+              Мы обеспечиваем безопасную доставку грузов любого объема от Калининграда до Камчатки 
+              в выделенном автотранспорте и контейнерах.
             </p>
           </div>
 
@@ -171,7 +174,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="Award" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">15+</h3>
+                <h3 className="text-2xl font-bold mb-2">12+</h3>
                 <p className="text-muted-foreground">лет на рынке</p>
               </CardContent>
             </Card>
@@ -181,8 +184,8 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="Users" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">200+</h3>
-                <p className="text-muted-foreground">довольных клиентов</p>
+                <h3 className="text-2xl font-bold mb-2">150+</h3>
+                <p className="text-muted-foreground">постоянных клиентов</p>
               </CardContent>
             </Card>
 
@@ -191,8 +194,8 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="TrendingUp" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">500+</h3>
-                <p className="text-muted-foreground">успешных проектов</p>
+                <h3 className="text-2xl font-bold mb-2">50+</h3>
+                <p className="text-muted-foreground">единиц техники</p>
               </CardContent>
             </Card>
           </div>
@@ -204,7 +207,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-primary">Наши услуги</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Полный спектр услуг для развития вашего бизнеса
+              Полный спектр транспортных услуг по всей России
             </p>
           </div>
 
@@ -237,7 +240,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-primary">Прайс-лист</h2>
             <p className="text-lg text-muted-foreground">
-              Выберите подходящий тариф для вашего бизнеса
+              Выберите подходящий вариант перевозки
             </p>
           </div>
 
@@ -258,7 +261,7 @@ const Index = () => {
                   <h3 className="text-2xl font-bold mb-4 text-center">{plan.name}</h3>
                   <div className="text-center mb-6">
                     <div className="text-4xl font-bold text-primary">{plan.price}</div>
-                    {plan.period && <div className="text-muted-foreground">₽ / {plan.period}</div>}
+                    {plan.period && <div className="text-muted-foreground">{plan.period}</div>}
                   </div>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, idx) => (
@@ -273,7 +276,7 @@ const Index = () => {
                     variant={plan.popular ? 'default' : 'outline'}
                     onClick={() => scrollToSection('contact')}
                   >
-                    Выбрать план
+                    Заказать
                   </Button>
                 </CardContent>
               </Card>
@@ -313,7 +316,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4 text-primary">Свяжитесь с нами</h2>
               <p className="text-lg text-muted-foreground">
-                Готовы обсудить ваш проект? Напишите нам!
+                Готовы обсудить доставку? Напишите нам!
               </p>
             </div>
 
@@ -325,7 +328,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Адрес офиса</h3>
-                    <p className="text-muted-foreground">г. Москва, ул. Бизнес-центр, д. 123</p>
+                    <p className="text-muted-foreground">г. Москва, Ленинградское шоссе, д. 25</p>
                   </div>
                 </div>
 
@@ -335,7 +338,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Телефон</h3>
-                    <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                    <p className="text-muted-foreground">+7 (495) 777-88-99</p>
                   </div>
                 </div>
 
@@ -345,7 +348,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@businesspro.ru</p>
+                    <p className="text-muted-foreground">info@gruztrans.ru</p>
                   </div>
                 </div>
 
@@ -355,7 +358,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Режим работы</h3>
-                    <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
+                    <p className="text-muted-foreground">Ежедневно: 8:00 - 20:00</p>
                   </div>
                 </div>
               </div>
@@ -372,11 +375,11 @@ const Index = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Email</label>
+                      <label className="block text-sm font-medium mb-2">Телефон</label>
                       <input 
-                        type="email" 
+                        type="tel" 
                         className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                        placeholder="ivan@example.com"
+                        placeholder="+7 (999) 123-45-67"
                       />
                     </div>
                     <div>
@@ -384,11 +387,11 @@ const Index = () => {
                       <textarea 
                         rows={4}
                         className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                        placeholder="Расскажите о вашем проекте..."
+                        placeholder="Опишите ваш груз и маршрут..."
                       />
                     </div>
                     <Button type="submit" className="w-full">
-                      Отправить сообщение
+                      Отправить заявку
                     </Button>
                   </form>
                 </CardContent>
@@ -402,11 +405,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Icon name="Building2" size={24} className="text-white" />
-              <span className="font-bold text-lg">BusinessPro</span>
+              <Icon name="Truck" size={24} className="text-white" />
+              <span className="font-bold text-lg">ГрузТранс</span>
             </div>
             <p className="text-sm opacity-90">
-              © 2024 BusinessPro. Все права защищены.
+              © 2024 ГрузТранс. Все права защищены.
             </p>
           </div>
         </div>
